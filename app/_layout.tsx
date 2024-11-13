@@ -73,7 +73,8 @@ function RootLayoutNav() {
 
            } }/>
           <Stack.Screen name="sortBy/SortBy"  options={{ headerShown: false,
-            presentation:'modal'
+            presentation:'modal',
+            animation:'slide_from_right'
            }}  />
 
 

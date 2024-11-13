@@ -1,6 +1,6 @@
 import { Dimensions, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React, { useEffect, useState } from 'react';
-import { router } from 'expo-router';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
+import { router, useNavigation } from 'expo-router';
 import { AntDesign, Entypo, Feather, MaterialCommunityIcons, MaterialIcons, Octicons } from '@expo/vector-icons';
 import Animated, { useAnimatedStyle, withSpring } from 'react-native-reanimated';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
@@ -17,6 +17,9 @@ const SortBy = () => {
       transform: [{ translateX: withSpring(BUTTON_WIDTH * index) }],
     };
   });
+  const navigation = useNavigation()
+
+  
   useEffect(() => {
     console.log(index);
   }, [index]);

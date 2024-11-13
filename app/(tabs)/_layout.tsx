@@ -1,5 +1,4 @@
 import { StyleSheet, View } from 'react-native';
-import React from 'react';
 import { Tabs } from 'expo-router';
 import { AntDesign, FontAwesome5, MaterialIcons, Octicons } from '@expo/vector-icons';
 
@@ -16,7 +15,7 @@ const Layout = () => {
           let index
 
           switch (route.name) {
-            case 'Home':
+            case 'index':
               icon = <Octicons  name="home" size={25} color={focused ? 'black' : 'white'} />
               index=1
               break;
@@ -49,14 +48,14 @@ const Layout = () => {
         },
       })}
     >
-      <Tabs.Screen name='Home'  />
+      <Tabs.Screen name='index'  />
       <Tabs.Screen name='Maps' />
       <Tabs.Screen name='Message' />
       <Tabs.Screen name='Team' />
       <Tabs.Screen name='Profile' />
 
     </Tabs>
-  );
+  )
 };
 
 export default Layout;
